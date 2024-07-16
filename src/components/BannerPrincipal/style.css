@@ -1,0 +1,15 @@
+section{
+    width: 100%;
+    height: 580px;
+
+}
+.container-banner{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-image: url('./img/b.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,67 @@
+.container-BuzzBenefits {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.container-title-buzzBenefits {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    font-size: 30px;
+    text-align: center; /* Centraliza o título */
+}
+
+.container-buzzBenefits {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os cartões quebrem linha se necessário */
+}
+
+.card-fits {
+    width: 300px;
+    height: max-content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px; /* Adiciona espaço entre os cartões */
+}
+
+.card-fits h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin: 10px 0; /* Adiciona margem para separar o título do parágrafo */
+}
+
+.card-fits p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin: 10px 0; /* Adiciona margem para separar o parágrafo de outros elementos */
+}
+
+.card-fits img {
+    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
+}
+
+.card-fits-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+.container-produtos{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 100%;
+    align-items: center;
+    margin-top: 70px;
+}
+.container-produtos .title{
+    font-family: 'Montserrat';
+    font-size: 48px;
+    color: #333333;
+}

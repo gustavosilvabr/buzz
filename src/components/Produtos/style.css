@@ -1,0 +1,228 @@
+.produtos {
+    display: flex;
+    justify-content: center; /* Centraliza os produtos */
+    flex-wrap: wrap; /* Permite a quebra de linha para itens grandes */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px; /* Espaçamento interno da seção */
+}
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /* Ajuste automático para responsividade */
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Coloca os itens dentro do card em coluna */
+    width: 360px; /* Garantia de que o card ocupe todo o espaço disponível */
+    text-align: center;
+    color: #333333;
+    font-family: 'Lato', sans-serif; /* Especifica a fonte 'Lato' corretamente */
+}
+
+.img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível sem distorcer */
+    border-radius: 15px; /* Aplica o border radius de 15px à imagem */
+    cursor: pointer; /* Adiciona um cursor pointer para indicar que a imagem é clicável */
+}
+
+.card h1 {
+    font-size: 20px;
+}
+
+.container-preco-review {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.preco {
+
+    display: flex;
+    flex-direction: column; /* Organiza o preço original e o promocional em coluna */
+    align-items: flex-end; /* Alinha os itens à esquerda */
+}
+
+.preco span {
+    text-decoration-line: line-through;
+    color: red; /* Define a cor do preço original */
+    font-size: 17px;
+    /* Espaçamento abaixo do preço original */
+}
+
+.preco h1 {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review img {
+    width: 30px;
+    height: 30px;
+    margin-right: 1px;
+}
+
+.review span {
+    text-decoration-line: underline;
+}
+
+.button-card {
+    width: 100%;
+}
+
+button {
+    width: 80%;
+}
+
+/* Estilos do modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    width: 10px;
+    max-width: 10px;
+    height: 10px;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-left {
+    flex: 1;
+}
+
+.modal-left .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+}
+
+.modal-right {
+    margin-top: 50px;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-right h1 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.modal-select {
+    margin-bottom: 20px;
+}
+
+.modal-select label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-select select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-comprar {
+    padding: 15px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container-button-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.img-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.arrow-icon {
+    width: 30px;
+    height: 30px;
+    fill: white; /* Ajuste a cor conforme necessário */
+}
+
+.click-info {
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    margin-top: 10px;
+}
