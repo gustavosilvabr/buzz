@@ -5,7 +5,7 @@ export default function Header(){
         <header>
           <img src={Logo} alt="" />
           <nav>
-            <ul>
+            <ul className='lista'>
                 <li>
                     <a href="">Produtos</a>
                 </li>

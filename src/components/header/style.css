@@ -7,7 +7,7 @@ nav{
     display: flex;
     align-items: center;
 }
-ul{
+.lista{
     display: flex;
     align-items: center;
     gap: 50px;
@@ -16,8 +16,7 @@ li{
     list-style: none;
     position: relative;
 }
-
-li::after {
+header li::after {
     content: '';
     position: absolute;
     width: 0;
@@ -27,8 +26,7 @@ li::after {
     left: 0;
     transition: width 0.3s ease-in-out;
 }
-
-li:hover::after {
+header li:hover::after {
     width: 100%;
 }
 a{
@@ -45,7 +43,7 @@ a{
     align-items: center;
     justify-content: center;
 }
-button{
+header button{
     width: 70%;
     font-family: "Lato", sans-serif;
     font-size: 20px;
@@ -59,7 +57,7 @@ button{
     border: solid 0px;
     transition: 0.9s all;
 }
-button:hover {
+ header button:hover {
     background-color: #24e04c;
     width: 100%;
     opacity: 0.9;

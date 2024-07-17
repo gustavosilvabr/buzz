@@ -8,14 +8,15 @@
 
 .container-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /* Ajuste automático para responsividade */
-    gap: 20px; /* Espaçamento entre os cards */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+    gap: 60px; /* Espaçamento entre os cards */
 }
 
 .card {
     display: flex;
     flex-direction: column; /* Coloca os itens dentro do card em coluna */
-    width: 360px; /* Garantia de que o card ocupe todo o espaço disponível */
+    width: 100%; /* Garantia de que o card ocupe todo o espaço disponível */
+    max-width: 360px; /* Limita a largura máxima do card */
     text-align: center;
     color: #333333;
     font-family: 'Lato', sans-serif; /* Especifica a fonte 'Lato' corretamente */
@@ -28,6 +29,65 @@
     border-radius: 15px; /* Aplica o border radius de 15px à imagem */
     cursor: pointer; /* Adiciona um cursor pointer para indicar que a imagem é clicável */
 }
+/* CSS existente... */
+
+.img-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.img-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.arrow-icon {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+.fixed-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    
+    font-size: 16px;
+    border-radius: 0 0 15px 15px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.img-container:hover .fixed-text {
+    opacity: 0;
+}
+
+/* CSS existente... */
+
 
 .card h1 {
     font-size: 20px;
@@ -36,21 +96,23 @@
 .container-preco-review {
     display: flex;
     justify-content: space-between;
-   
 }
 
 .preco {
-
     display: flex;
+    align-items: flex-end;
     flex-direction: column; /* Organiza o preço original e o promocional em coluna */
-    align-items: flex-end; /* Alinha os itens à esquerda */
 }
 
 .preco span {
     text-decoration-line: line-through;
     color: red; /* Define a cor do preço original */
     font-size: 17px;
-    /* Espaçamento abaixo do preço original */
+    display: flex;
+    position: relative;
+    top: 25px;
+    left: 30px;
+    font-weight: bold;
 }
 
 .preco h1 {
@@ -72,14 +134,30 @@
 
 .review span {
     text-decoration-line: underline;
+    font-weight: bold;
 }
 
 .button-card {
     width: 100%;
 }
-
-button {
-    width: 80%;
+.button-card button{
+  width: 80%;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    box-shadow: #333333 0px 0px 0px 0px, #333333 0px 4px 2px 0.2px;
+    background-color: #45c260;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    border: solid 0px;
+    transition: 0.9s all;
+}
+.button-card button:hover {
+    background-color: #24e04c;
+    width: 100%;
+    opacity: 0.9;
 }
 
 /* Estilos do modal */
@@ -101,6 +179,7 @@ button {
     background: white;
     border-radius: 15px;
     width: 80%;
+    height: 80%;
     max-width: 900px;
     display: flex;
     overflow: hidden;
@@ -113,33 +192,81 @@ button {
     right: 10px;
     border: none;
     cursor: pointer;
-    width: 10px;
-    max-width: 10px;
-    height: 10px;
+    font-size: 24px;
+    width: 30px;
+    max-width: 30px;
+    height: 30px;
     background-color: #333333;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    box-shadow: #333333 0px 0px 0px 0px, #333333 0px 4px 2px 0.2px;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    border: solid 0px;
+    transition: 0.9s all;
+}
+.close-modal:hover {
+    background-color: #24e04c;
+    width: 100%;
+    opacity: 0.9;
+}
+.modal-left {
+    width: 40%;
+    height: 100%;
+}
+
+.modal-left .slick-slider {
+    height: 400px;
+}
+
+.modal-left .slick-slide {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.modal-left {
-    flex: 1;
+.modal-left .react-player {
+    width: 100%;
+    height: 100%;
+
+}
+
+.video-container {
+    width: 100%;
+    height: 400px; /* Mesma altura da imagem */
+    display: flex;
+    justify-content: center;
+  
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+   
 }
 
 .modal-left .img {
-    width: 100%;
+    width: 110%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px 0 0 15px;
 }
 
 .modal-right {
-    margin-top: 50px;
     flex: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 58px;
 }
 
 .modal-right h1 {
@@ -163,7 +290,9 @@ button {
     border: 1px solid #ccc;
 }
 
+
 .btn-comprar {
+    width: 75%;
     padding: 15px;
     background-color: #333333;
     color: white;
@@ -175,7 +304,27 @@ button {
     justify-content: center;
     align-items: center;
     display: flex;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    box-shadow: #333333 0px 0px 0px 0px, #333333 0px 4px 2px 0.2px;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    border: solid 0px;
+    transition: 0.9s all;
 }
+.btn-comprar:hover {
+    background-color: #24e04c;
+    width: 100%;
+    opacity: 0.9;
+}
+
+
+
+
+
 
 .container-button-modal {
     display: flex;
@@ -225,4 +374,51 @@ button {
     font-size: 14px;
     color: #666666;
     margin-top: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-ver-mais, .btn-voltar {
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 55%;
+    padding: 10px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    box-shadow: #333333 0px 0px 0px 0px, #333333 0px 4px 2px 0.2px;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    border: solid 0px;
+    transition: 0.9s all;
+}
+.btn-ver-mais:hover{
+    background-color: #24e04c;
+    width: 50%;
+    opacity: 0.9;
+}
+.btn-voltar:hover{
+    background-color: #24e04c;
+    width: 50%;
+    opacity: 0.9;
 }
