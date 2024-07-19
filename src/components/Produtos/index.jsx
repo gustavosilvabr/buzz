@@ -10,7 +10,7 @@ import Review from './review.png';
 import ArrowIcon from './arrow.png';
 import ReactPlayer from 'react-player';
 
-const products = [
+export const products = [
     { id: 1, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
     { id: 2, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
     { id: 3, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },

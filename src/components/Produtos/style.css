@@ -124,6 +124,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: 10px;
 }
 
 .review img {
@@ -218,12 +220,12 @@
     opacity: 0.9;
 }
 .modal-left {
-    width: 40%;
+    width: 45%;
     height: 100%;
 }
 
 .modal-left .slick-slider {
-    height: 400px;
+    height: 540px;
 }
 
 .modal-left .slick-slide {
@@ -235,7 +237,7 @@
 
 .modal-left .react-player {
     width: 100%;
-    height: 100%;
+    height: 100%; 
 
 }
 
@@ -254,7 +256,7 @@
 }
 
 .modal-left .img {
-    width: 110%;
+    width: 120%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px 0 0 15px;
@@ -320,10 +322,6 @@
     width: 100%;
     opacity: 0.9;
 }
-
-
-
-
 
 
 .container-button-modal {
