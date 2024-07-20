@@ -1,4 +1,4 @@
-import Logo from './img/logo.webp'
+import Logo from './img/logo.png'
 import './style.css'
 export default function Header(){
     return(

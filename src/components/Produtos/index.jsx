@@ -118,10 +118,10 @@ export default function Produtos() {
                                         muted
                                     />
                                 </div>
-                                <div>
+                                <div className='img-modal'>
                                     <img className='img' src={Img1} alt={selectedProduct.name} />
                                 </div>
-                                <div>
+                                <div className='img-modal'>
                                     <img className='img' src={Img2} alt={selectedProduct.name} />
                                 </div>
                             </Slider>

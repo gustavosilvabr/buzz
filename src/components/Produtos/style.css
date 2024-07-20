@@ -22,7 +22,7 @@
     font-family: 'Lato', sans-serif; /* Especifica a fonte 'Lato' corretamente */
 }
 
-.img {
+.img{
     width: 100%;
     height: 400px;
     object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível sem distorcer */
@@ -180,9 +180,10 @@
 .modal-content {
     background: white;
     border-radius: 15px;
-    width: 80%;
-    height: 80%;
-    max-width: 900px;
+    width: 90%;
+    height: 90%;
+    max-width: 1200px;
+    max-height: 640px;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -220,10 +221,17 @@
     opacity: 0.9;
 }
 .modal-left {
-    width: 45%;
+    width: 500px;
     height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
 }
-
+.img-modal{
+    width: 70%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
 .modal-left .slick-slider {
     height: 540px;
 }
@@ -238,7 +246,7 @@
 .modal-left .react-player {
     width: 100%;
     height: 100%; 
-
+    border-radius: 15px;
 }
 
 .video-container {
@@ -254,14 +262,11 @@
     height: 100%;
    
 }
-
 .modal-left .img {
-    width: 120%;
+    width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 15px 0 0 15px;
+    border-radius: 15px
 }
-
 .modal-right {
     flex: 1;
     padding: 20px;
@@ -270,29 +275,23 @@
     font-family: 'Montserrat', sans-serif;
     margin-top: 58px;
 }
-
 .modal-right h1 {
     margin-bottom: 20px;
     font-size: 25px;
 }
-
 .modal-select {
     margin-bottom: 20px;
 }
-
 .modal-select label {
     display: block;
     margin-bottom: 5px;
 }
-
 .modal-select select {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-
-
 .btn-comprar {
     width: 75%;
     padding: 15px;
