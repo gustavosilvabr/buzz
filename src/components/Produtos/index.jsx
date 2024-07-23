@@ -3,27 +3,10 @@ import './style.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Img1 from './img1.jpg';
-import Video01 from './video02.mp4';
-import Img2 from './img1.jpg'; // Adicione outras imagens conforme necessário
-import Review from './review.png';
-import ArrowIcon from './arrow.png';
 import ReactPlayer from 'react-player';
-
-export const products = [
-    { id: 1, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 2, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 3, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 4, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 5, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 6, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 7, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 8, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 9, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 10, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 11, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 },
-    { id: 12, name: 'Rasteirinha Feminina Marrom Estilo Casual Antiderrapante', price: 50.00, originalPrice: 70.00, image: Img1 }
-];
+import ArrowIcon from '../Produtos/arrow.png';
+import Review from '../Produtos/review.png';
+import { products } from '../../data/productsData.js';
 
 export default function Produtos() {
     const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, 6));
@@ -80,13 +63,11 @@ export default function Produtos() {
                             </div>
                             <div className='review'>
                                 <img src={Review} alt="Review" />
-                                <span>235 Review</span>
+                                <span>{product.reviews} Reviews</span>
                             </div>
                         </div>
                         <div className='button-card'>
-                            <button>
-                                Peça pelo Whatsapp
-                            </button>
+                            <button>Peça pelo Whatsapp</button>
                         </div>
                     </div>
                 ))}
@@ -106,23 +87,22 @@ export default function Produtos() {
                         <button className='close-modal' onClick={closeModal}>X</button>
                         <div className='modal-left'>
                             <Slider {...settings}>
-                                <div>
-                                    <ReactPlayer
-                                        className='react-player'
-                                        width='100%'
-                                        height='100%'
-                                        url={Video01}
-                                        playing
-                                        controls
-                                        loop
-                                        muted
-                                    />
-                                </div>
+                                {selectedProduct.video && (
+                                    <div>
+                                        <ReactPlayer
+                                            className='react-player'
+                                            width='100%'
+                                            height='100%'
+                                            url={selectedProduct.video}
+                                            playing
+                                            controls
+                                            loop
+                                            muted
+                                        />
+                                    </div>
+                                )}
                                 <div className='img-modal'>
-                                    <img className='img' src={Img1} alt={selectedProduct.name} />
-                                </div>
-                                <div className='img-modal'>
-                                    <img className='img' src={Img2} alt={selectedProduct.name} />
+                                    <img className='img' src={selectedProduct.image} alt={selectedProduct.name} />
                                 </div>
                             </Slider>
                         </div>

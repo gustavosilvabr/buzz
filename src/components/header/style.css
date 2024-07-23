@@ -1,21 +1,30 @@
-header{
-    display:flex;
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
-nav{
+
+nav {
     display: flex;
     align-items: center;
 }
-.lista{
+
+.lista {
     display: flex;
     align-items: center;
     gap: 50px;
 }
-li{
+
+li {
     list-style: none;
     position: relative;
+    cursor: pointer;
 }
+
 header li::after {
     content: '';
     position: absolute;
@@ -26,24 +35,28 @@ header li::after {
     left: 0;
     transition: width 0.3s ease-in-out;
 }
+
 header li:hover::after {
     width: 100%;
 }
-a{
+
+a {
     text-decoration: none;
     font-size: 20px;
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size:30px;
+    font-size: 30px;
     color: #333333;
 }
-.button-container{
+
+.button-container {
     width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-header button{
+
+header button {
     width: 70%;
     font-family: "Lato", sans-serif;
     font-size: 20px;
@@ -57,8 +70,11 @@ header button{
     border: solid 0px;
     transition: 0.9s all;
 }
- header button:hover {
+
+header button:hover {
     background-color: #24e04c;
     width: 100%;
     opacity: 0.9;
 }
+
+/* Adicione o estilo para o footer e outras seções conforme necessário */

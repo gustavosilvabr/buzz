@@ -5,7 +5,7 @@ import Card04 from './img/card04.png';
 import './style.css'
 export default function BuzzBenefits() {
     return (
-        <section className='container-BuzzBenefits'>
+        <section className='container-BuzzBenefits' id='beneficios'>
             <div className='container-title-buzzBenefits'>
                 <h1>Por que Comprar na BUZZ CALÇADOS ?</h1>
             </div>

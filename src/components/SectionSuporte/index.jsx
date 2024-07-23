@@ -4,9 +4,9 @@ import './style.css';
 
 export default function SectionSuporte() {
     return (
-        <section className="sessao-suporte">
-            <div className="container-suporte">
-                <div className="img-suporte">
+        <section id='contato' className="sessao-suporte" >
+            <div className="container-suporte" >
+                <div className="img-suporte" >
                     <img src={suporteImg} alt="Suporte" />
                 </div>
                 <div className="content-suporte">

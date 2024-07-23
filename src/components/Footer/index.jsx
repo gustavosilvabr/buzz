@@ -15,9 +15,9 @@ export default function Footer() {
                     <nav className='nav-footer'>
                         <h2>Pages</h2>
                         <ul className="footer-nav">
-                            <li><a href="#">Produtos</a></li>
-                            <li><a href="#">Contato</a></li>
-                            <li><a href="#">Avaliação</a></li>
+                            <li><a href="#produtos">Produtos</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                            <li><a href="#avaliacoes">Avaliação</a></li>
                         </ul>
                     </nav>
                 </div>

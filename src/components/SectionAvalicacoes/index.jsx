@@ -18,14 +18,14 @@ export default function SectionAvaliacoes() {
     };
 
     return (
-        <section>
-            <div className="container-avaliacoes">
-                <div className="title-avaliacoes">
+        <section id='avaliacoes'>
+            <div className="container-avaliacoes" >
+                <div className="title-avaliacoes" >
                     <h1>AVALIAÇÕES DOS NOSSOS CLIENTES</h1>
                 </div>
                 <div className="container-card-review">
       
-                        <div className="card-review">
+                        <div className="card-review" >
                                 <div className="img-card-revi ew">
                                     <img src={img} alt="Cliente" />
                                 </div>

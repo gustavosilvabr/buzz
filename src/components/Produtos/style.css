@@ -21,6 +21,15 @@
     color: #333333;
     font-family: 'Lato', sans-serif; /* Especifica a fonte 'Lato' corretamente */
 }
+.card h1 {
+    font-size: 20px;
+
+    height: 40px;
+    display: -webkit-box;
+
+}
+
+
 
 .img{
     width: 100%;

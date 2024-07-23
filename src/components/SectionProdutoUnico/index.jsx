@@ -1,13 +1,15 @@
+// src/components/SingleProduct.js
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ReactPlayer from 'react-player';
-import Img1 from '../Produtos/img1.jpg';
-import Video01 from '../Produtos/video02.mp4';
 import './style.css';
-import Review from '../Produtos/review.png';
+import imgAvaliacoes from './review.png';
+import { products } from '../../data/productsData';
+
 const SingleProduct = () => {
+    const selectedProduct = products[1]; // Seleciona o primeiro produto para exibir
     const settings = {
         dots: true,
         infinite: true,
@@ -21,46 +23,46 @@ const SingleProduct = () => {
             <div className='container-produto-unico'>
                 <div className='container'>
                     <Slider {...settings}>
-                        <div className='img-unico'>
-                            <div className='video-wrapper'>
-                                <ReactPlayer
-                                    className='react-player'
-                                    url={Video01}
-                                    playing
-                                    controls
-                                    loop
-                                    muted     width='100%'
-                                    height='100%'
-                                />
+                
+                            <div key={selectedProduct.id}  className='img-unico'>
+                                <div key={selectedProduct.id}  className='video-wrapper'>
+                                    <ReactPlayer
+                                        className='react-player'
+                                        url={selectedProduct.video}
+                                        playing
+                                        controls
+                                        loop
+                                        muted
+                                        width='100%'
+                                        height='100%'
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className='img-unico'>
-                            <img src={Img1} alt="Produto" />
-                        </div>
-                        <div className='img-unico'>
-                            <img src={Img1} alt="Produto" />
-                        </div>
+            
+                        {selectedProduct.image && (
+                            <div key={selectedProduct.id} className='img-unico'>
+                                <img src={selectedProduct.image} alt={`Imagem ${selectedProduct.name}`} />
+                            </div>
+                        )}
                     </Slider>
                 </div>
                 <div className='contianer-right'>
                     <div className='container-text'>
-                        <h1>
-                            Rasteirinha Feminina Marrom Estilo Casual Antiderrapante
-                        </h1>
+                        <h1>{selectedProduct.name}</h1>
                         <div className='text'>
-                           <div className='preco-unico'>
-                            <span>R$60,00</span>
-                                <h1>R$30,00</h1>
-                           </div>
-                           <div className='review-unico'>
-                                <img src={Review} alt="Review" />
-                                <span>235 Review</span>
+                            <div className='preco-unico'>
+                                <span>R${selectedProduct.originalPrice.toFixed(2)}</span>
+                                <h1>R${selectedProduct.price.toFixed(2)}</h1>
+                            </div>
+                            <div className='review-unico'>
+                                <img src={imgAvaliacoes} alt="Review" />
+                                <span>{selectedProduct.reviews} Reviews</span>
                             </div>
                         </div>
                     </div>
                     <div className="button-whatsapp">
-                  <button className='btn-comprar'>Peça pelo WhatsApp</button>
-                </div>
+                        <button className='btn-comprar'>Peça pelo WhatsApp</button>
+                    </div>
                 </div>
             </div>
         </section>
