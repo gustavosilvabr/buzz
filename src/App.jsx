@@ -11,8 +11,6 @@ import SingleProduct from './components/SectionProdutoUnico';
 import SectionSuporte from './components/SectionSuporte';
 import './style.css';
 import { useEffect } from 'react';
-import { products } from './data/productsData.js';
-
 export default function App() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -22,19 +20,12 @@ export default function App() {
     <>
       <Header />
       <BannerPrincipal />
-      <section id="beneficios" data-aos="fade-up">
-        <BuzzBenefits />
-      </section>
+      <BuzzBenefits id="beneficios" data-aos="fade-up" />
       <SectionProdutos />
-      <section id="single-product" data-aos="fade-up">
-        <SingleProduct/>
-      </section>
-      <section id="avaliacoes" data-aos="fade-up">
-        <SectionAvaliacoes />
-      </section>
-      <section id="contato" data-aos="fade-up">
-        <SectionSuporte />
-      </section>
+      <SingleProduct id="single-product" data-aos="fade-up" />
+      <SectionAvaliacoes id="avaliacoes" data-aos="fade-up" />
+      <SectionSuporte id="contato" data-aos="fade-up" />
+
       <Footer />
     </>
   );

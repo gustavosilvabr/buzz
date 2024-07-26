@@ -1,49 +1,53 @@
-.produtos {
+/* Estilos base */
+.produtos{
     display: flex;
-    justify-content: center; /* Centraliza os produtos */
-    flex-wrap: wrap; /* Permite a quebra de linha para itens grandes */
-    gap: 20px; /* Espaçamento entre os itens */
-    padding: 20px; /* Espaçamento interno da seção */
+    justify-content: center;
+    /* Centraliza os produtos */
+    flex-wrap: wrap;
+    /* Permite a quebra de linha para itens grandes */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+    padding: 20px;
+    /* Espaçamento interno da seção */
 }
-
 .container-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
-    gap: 60px; /* Espaçamento entre os cards */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas fixas */
+    gap: 60px;
+    /* Espaçamento entre os cards */
 }
-
 .card {
     display: flex;
-    flex-direction: column; /* Coloca os itens dentro do card em coluna */
-    width: 100%; /* Garantia de que o card ocupe todo o espaço disponível */
-    max-width: 360px; /* Limita a largura máxima do card */
+    flex-direction: column;
+    /* Coloca os itens dentro do card em coluna */
+    width: 100%;
+    /* Garantia de que o card ocupe todo o espaço disponível */
+    max-width: 360px;
+    /* Limita a largura máxima do card */
     text-align: center;
     color: #333333;
-    font-family: 'Lato', sans-serif; /* Especifica a fonte 'Lato' corretamente */
+    font-family: 'Lato', sans-serif;
+    /* Especifica a fonte 'Lato' corretamente */
 }
 .card h1 {
     font-size: 20px;
-
     height: 40px;
     display: -webkit-box;
-
 }
-
-
-
-.img{
+.img {
     width: 100%;
     height: 400px;
-    object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível sem distorcer */
-    border-radius: 15px; /* Aplica o border radius de 15px à imagem */
-    cursor: pointer; /* Adiciona um cursor pointer para indicar que a imagem é clicável */
+    object-fit: cover;
+    /* Garante que a imagem cubra todo o espaço disponível sem distorcer */
+    border-radius: 15px;
+    /* Aplica o border radius de 15px à imagem */
+    cursor: pointer;
+    /* Adiciona um cursor pointer para indicar que a imagem é clicável */
 }
-/* CSS existente... */
-
 .img-container {
     position: relative;
 }
-
 .overlay {
     position: absolute;
     top: 0;
@@ -63,21 +67,18 @@
 .img-container:hover .overlay {
     opacity: 1;
 }
-
 .overlay-text {
     color: white;
     font-size: 18px;
     text-align: center;
     margin-bottom: 10px;
 }
-
 .arrow-icon {
     width: 30px;
     height: 30px;
     fill: white;
 }
-
-.fixed-text {
+.fixed-text{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -85,37 +86,28 @@
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
-    
     font-size: 16px;
     border-radius: 0 0 15px 15px;
     transition: opacity 0.3s ease-in-out;
 }
-
-.img-container:hover .fixed-text {
+.img-container:hover .fixed-text{
     opacity: 0;
 }
-
-/* CSS existente... */
-
-
-.card h1 {
-    font-size: 20px;
-}
-
 .container-preco-review {
     display: flex;
     justify-content: space-between;
 }
-
 .preco {
     display: flex;
     align-items: flex-end;
-    flex-direction: column; /* Organiza o preço original e o promocional em coluna */
+    flex-direction: column;
+    /* Organiza o preço original e o promocional em coluna */
 }
 
 .preco span {
     text-decoration-line: line-through;
-    color: red; /* Define a cor do preço original */
+    color: red;
+    /* Define a cor do preço original */
     font-size: 17px;
     display: flex;
     position: relative;
@@ -123,12 +115,10 @@
     left: 30px;
     font-weight: bold;
 }
-
 .preco h1 {
     font-size: 25px;
     font-weight: bolder;
 }
-
 .review {
     display: flex;
     align-items: center;
@@ -136,23 +126,20 @@
     position: relative;
     top: 10px;
 }
-
 .review img {
     width: 30px;
     height: 30px;
     margin-right: 1px;
 }
-
 .review span {
     text-decoration-line: underline;
     font-weight: bold;
 }
-
 .button-card {
     width: 100%;
 }
-.button-card button{
-  width: 80%;
+.button-card button {
+    width: 80%;
     font-family: "Lato", sans-serif;
     font-size: 20px;
     box-shadow: #333333 0px 0px 0px 0px, #333333 0px 4px 2px 0.2px;
@@ -170,9 +157,7 @@
     width: 100%;
     opacity: 0.9;
 }
-
 /* Estilos do modal */
-
 .modal {
     position: fixed;
     top: 0;
@@ -185,7 +170,6 @@
     align-items: center;
     z-index: 1000;
 }
-
 .modal-content {
     background: white;
     border-radius: 15px;
@@ -197,7 +181,6 @@
     overflow: hidden;
     position: relative;
 }
-
 .close-modal {
     position: absolute;
     top: 10px;
@@ -235,7 +218,7 @@
     border-radius: 15px;
     object-fit: cover;
 }
-.img-modal{
+.img-modal {
     width: 70%;
     height: 100%;
     border-radius: 15px;
@@ -244,37 +227,32 @@
 .modal-left .slick-slider {
     height: 540px;
 }
-
 .modal-left .slick-slide {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .modal-left .react-player {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     border-radius: 15px;
 }
-
 .video-container {
     width: 100%;
-    height: 400px; /* Mesma altura da imagem */
+    height: 400px;
+    /* Mesma altura da imagem */
     display: flex;
     justify-content: center;
-  
 }
-
 .video {
     width: 100%;
     height: 100%;
-   
 }
 .modal-left .img {
     width: 100%;
     height: 100%;
-    border-radius: 15px
+    border-radius: 15px;
 }
 .modal-right {
     flex: 1;
@@ -330,65 +308,36 @@
     width: 100%;
     opacity: 0.9;
 }
-
-
 .container-button-modal {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.img-container {
-    position: relative;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 15px;
-}
-
-.img-container:hover .overlay {
-    opacity: 1;
-}
-
 .overlay-text {
     color: white;
     font-size: 18px;
     text-align: center;
     margin-bottom: 10px;
 }
-
 .arrow-icon {
     width: 30px;
     height: 30px;
-    fill: white; /* Ajuste a cor conforme necessário */
+    fill: white;
 }
-
 .click-info {
     text-align: center;
     font-size: 14px;
     color: #666666;
     margin-top: 10px;
 }
-
 .button-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-.btn-ver-mais, .btn-voltar {
+.btn-ver-mais,
+.btn-voltar {
     background-color: #333333;
     color: white;
     border: none;
@@ -398,13 +347,6 @@
     text-transform: uppercase;
     width: 55%;
     padding: 10px;
-    background-color: #333333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    text-transform: uppercase;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -418,13 +360,92 @@
     border: solid 0px;
     transition: 0.9s all;
 }
-.btn-ver-mais:hover{
+
+.btn-ver-mais:hover {
     background-color: #24e04c;
     width: 50%;
     opacity: 0.9;
 }
-.btn-voltar:hover{
+
+.btn-voltar:hover {
     background-color: #24e04c;
     width: 50%;
     opacity: 0.9;
+}
+
+/* Media Queries para responsividade */
+
+/* Para telas menores que 1200px */
+@media (max-width: 1200px) {
+    .container-cards {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas */
+        gap: 30px;
+        /* Reduzir o espaçamento entre os cards */
+    }
+
+    .modal-content {
+        width: 95%;
+        height: 95%;
+    }
+
+    .modal-left {
+        width: 100%;
+        height: 50%;
+        /* Ajuste a altura conforme necessário */
+    }
+
+    .modal-right {
+        margin-top: 20px;
+    }
+}
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .container-cards {
+        grid-template-columns: 1fr;
+        /* 1 coluna */
+        gap: 20px;
+        /* Reduzir o espaçamento entre os cards */
+    }
+
+    .modal-content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .modal-left {
+        width: 100%;
+        height: 300px;
+        /* Ajuste a altura conforme necessário */
+    }
+
+    .modal-right {
+        width: 100%;
+    }
+
+    .btn-comprar {
+        width: 100%;
+    }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+    .img {
+        height: 200px;
+        /* Ajustar a altura da imagem */
+    }
+
+    .button-card button {
+        font-size: 16px;
+        /* Ajustar o tamanho da fonte */
+        padding: 10px;
+    }
+
+    .btn-ver-mais,
+    .btn-voltar {
+        font-size: 14px;
+        /* Ajustar o tamanho da fonte */
+        width: 70%;
+    }
 }

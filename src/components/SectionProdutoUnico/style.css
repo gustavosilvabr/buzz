@@ -1,16 +1,25 @@
 .container-produto-unico {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
     margin-top: 120px;
     font-family:'Lato';
+    flex-wrap: wrap;
 }
 
 .container {
     width: 370px;
     height: 455px;
     border-radius: 15px;
+   
 }
-
+.container-right{
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    justify-content: center;
+}
 .img-unico {
     display: flex;
     width: 350px;

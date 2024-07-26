@@ -74,4 +74,7 @@
     width: 20px;
     height: 20px;
 }
- 
+ #avaliacoes{
+    height: max-content;
+    width: 100%;
+ }

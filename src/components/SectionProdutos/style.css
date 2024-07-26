@@ -4,7 +4,8 @@
     height: max-content;
     width: 100%;
     align-items: center;
-    margin-top:-70px;
+    justify-content: center;
+    text-align: center;
 }
 .container-produtos .title{
     font-family: 'Montserrat';
