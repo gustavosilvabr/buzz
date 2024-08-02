@@ -14,7 +14,7 @@ export default function BuzzBenefits() {
                     <img src={Card01} alt="" />
                     <div className='card-fits-text'>
                         <h1>Design Exclusivo</h1>
-                        <p>Nossas sandálias femininas são desenhadas com exclusividade, oferecendo uma combinação única de elegância e conforto, perfeitas para qualquer ocasião.</p>
+    
                     </div>
                 </div>
                 <div className="card-fits">

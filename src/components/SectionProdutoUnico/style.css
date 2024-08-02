@@ -57,13 +57,13 @@
 }
 .container-text{
     display: flex;
-    width: 700px;
+    width: 600px;
     margin: 0px;
     flex-direction: column;
-    
+
 }
 .container-text h1{
-    font-size: 60px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     margin: 0px;

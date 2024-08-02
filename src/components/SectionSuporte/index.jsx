@@ -12,7 +12,7 @@ export default function SectionSuporte() {
                 <div className="content-suporte">
                     <h1>ENTRE EM CONTATO</h1>
                     <p>
-                        Nossa equipe está sempre à disposição para ajudar você. Se tiver qualquer dúvida ou precisar de assistência, entre em contato conosco pelo WhatsApp. Estamos aqui para garantir uma experiência de compra tranquila e satisfatória.
+                        Nossa equipe está sempre à disposição para ajudar você. Se tiver qualquer dúvida ou precisar de assistência, entre em contato conosco pelo WhatsApp.
                     </p>
                     <button className="btn-suporte">
                         Suporte Via Whatsapp

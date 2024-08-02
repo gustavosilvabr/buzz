@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    flex-wrap: wrap;
 }
 
 .container-title-buzzBenefits {
@@ -15,7 +14,6 @@
     color: #333333;
     font-size: 40px;
     text-align: center; /* Centraliza o título */
-    flex-wrap: wrap;
 }
 
 .container-buzzBenefits {
@@ -25,7 +23,6 @@
     margin-top: 50px;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que os cartões quebrem linha se necessário */
 }
 
 .card-fits {
@@ -38,7 +35,6 @@
     align-items: center;
     justify-content: center;
     margin: 0px 20px; /* Adiciona espaço entre os cartões */
-    flex-wrap: wrap;
 }
 
 .card-fits h1 {

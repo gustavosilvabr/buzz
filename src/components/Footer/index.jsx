@@ -13,7 +13,7 @@ export default function Footer() {
                     </div>
                    
                     <nav className='nav-footer'>
-                        <h2>Pages</h2>
+                        <h2>Paginas</h2>
                         <ul className="footer-nav">
                             <li><a href="#produtos">Produtos</a></li>
                             <li><a href="#contato">Contato</a></li>
@@ -26,7 +26,7 @@ export default function Footer() {
                     <ul className="footer-contact">
                         <li>
                             <FaPhone className="footer-icon" />
-                            <span>(11) 1234-5678</span>
+                            <span>(61) 982635975</span>
                         </li>
                         <li>
                             <FaEnvelope className="footer-icon" />
@@ -34,7 +34,7 @@ export default function Footer() {
                         </li>
                         <li>
                             <FaMapMarkerAlt className="footer-icon" />
-                            <span>Rua Exemplo, 123, São Paulo, SP</span>
+                            <span>Brasilia-DF</span>
                         </li>
                     </ul>
                     <div className="footer-payment">

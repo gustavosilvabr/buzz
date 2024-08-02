@@ -20,7 +20,7 @@ export default function App() {
     <>
       <Header />
       <BannerPrincipal />
-      <BuzzBenefits id="beneficios" data-aos="fade-up" />
+      {/* <BuzzBenefits id="beneficios" data-aos="fade-up" /> */}
       <SectionProdutos />
       <SingleProduct id="single-product" data-aos="fade-up" />
       <SectionAvaliacoes id="avaliacoes" data-aos="fade-up" />
