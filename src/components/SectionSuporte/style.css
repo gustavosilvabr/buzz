@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserif', sans-serif;
+    margin: 100px 0px;
 }
 
 .container-suporte {
@@ -47,7 +47,7 @@
 
 .btn-suporte {
   
-    width: 75%;
+    width: 100%;
     background-color: #24e04c;
     color: white;
     border-radius: 5px;
@@ -57,7 +57,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    font-family: "Lato", sans-serif;
     box-shadow: #333333 0px 0px 0px 0px, #333333 0px 4px 2px 0.2px;
     padding: 20px;
     border-radius: 5px;

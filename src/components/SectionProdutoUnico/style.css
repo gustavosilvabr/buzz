@@ -4,7 +4,6 @@
     align-items: center;
     text-align: center;
     margin-top: 120px;
-    font-family:'Lato';
     flex-wrap: wrap;
 }
 
@@ -85,7 +84,7 @@
     font-size: 45px;
 }
 .btn-comprar{
-    width: 75%;
+    width: 85%;
     background-color: #24e04c;
     color: white;
     border-radius: 5px;
@@ -95,7 +94,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    font-family: "Lato", sans-serif;
     box-shadow: #333333 0px 0px 0px 0px, #333333 0px 4px 2px 0.2px;
     padding: 20px;
     border-radius: 5px;

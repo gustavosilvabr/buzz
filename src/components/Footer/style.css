@@ -1,7 +1,6 @@
 .footer {
     display: flex;
     background-color: #f9f9f9;
-    font-family: 'Mont-serrat', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;

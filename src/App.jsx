@@ -11,6 +11,7 @@ import SingleProduct from './components/SectionProdutoUnico';
 import SectionSuporte from './components/SectionSuporte';
 import './style.css';
 import { useEffect } from 'react';
+import whatsapp from './whatsapp.png'
 export default function App() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -21,12 +22,19 @@ export default function App() {
       <Header />
       <BannerPrincipal />
       {/* <BuzzBenefits id="beneficios" data-aos="fade-up" /> */}
-      <SectionProdutos />
+      <SectionProdutos id="produtos"/>
       <SingleProduct id="single-product" data-aos="fade-up" />
       <SectionAvaliacoes id="avaliacoes" data-aos="fade-up" />
       <SectionSuporte id="contato" data-aos="fade-up" />
 
       <Footer />
+    
+<div className="whatsapp-button">
+    <a href="https://wa.me/5561982635975?text=Olá%2C%20Gostaria%20de%20falar%20com%20o%20atendente." target="_blank" rel="noopener noreferrer">
+        <img src={whatsapp}alt="WhatsApp" />
+    </a>
+</div>
+
     </>
   );
 }

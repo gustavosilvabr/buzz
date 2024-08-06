@@ -1,7 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
 #root{
     background-color: #f9f9f9;
 
 }
 body{
-    margin: 0;
+    margin: 0; 
+}
+h1, h2, h3, h4, h5, h6 li a button ul header p {
+    font-family: 'Lora', serif;
+}
+/* Estilo para o botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Distância do botão da parte inferior da tela */
+    right: 20px; /* Distância do botão da parte direita da tela */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+.whatsapp-button img {
+    width: 60px; /* Ajuste o tamanho conforme necessário */
+    height: 60px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 50%; /* Torna o botão redondo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao botão */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+    transition: opacity 0.3s; /* Adiciona uma transição suave */
+}
+
+.whatsapp-button img:hover {
+    opacity: 0.8; /* Altera a opacidade ao passar o mouse sobre o botão */
 }

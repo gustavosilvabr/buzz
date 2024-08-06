@@ -1,7 +1,7 @@
 import './style.css';
 export default function BannerPrincipal(){
     return(
-        <section>
+        <section className='bannerPrincipal'>
             <div className="container-banner"></div>
         </section>
     )

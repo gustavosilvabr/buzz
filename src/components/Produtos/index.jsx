@@ -8,11 +8,29 @@ import ArrowIcon from '../Produtos/arrow.png';
 import Review from '../Produtos/review.png';
 import { products } from '../../data/productsData.js';
 
-export default function Produtos() {
+export default function Produtos(){
     const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, 6));
     const [isShowingMore, setIsShowingMore] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const [selectedSize, setSelectedSize] = useState('');
+    const [selectedColor, setSelectedColor] = useState('');
+
+
+    const handleButtonClick = (product) => {
+        const message = `Olá, gostaria de mais informações sobre o modelo: ${product.name}.`;
+        const url = `https://wa.me/5561982635975?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank', 'noopener,noreferrer');
+    }
+    const handleBuyClick = () => {
+        if (selectedProduct) {
+            const message = `Olá, gostaria de comprar o produto: ${selectedProduct.name} ` + 
+                            `Tamanho: ${selectedSize}` + 
+                            ` Cor: ${selectedColor}`;
+            const url = `https://wa.me/5561982635975?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+    };
 
     const openModal = (product) => {
         setSelectedProduct(product);
@@ -22,6 +40,8 @@ export default function Produtos() {
     const closeModal = () => {
         setIsModalOpen(false);
         setSelectedProduct(null);
+        setSelectedSize('');
+        setSelectedColor('');
     };
 
     const showMoreProducts = () => {
@@ -32,6 +52,14 @@ export default function Produtos() {
     const showLessProducts = () => {
         setDisplayedProducts(products.slice(0, 6));
         setIsShowingMore(false);
+    };
+
+    const handleSizeChange = (event) => {
+        setSelectedSize(event.target.value);
+    };
+
+    const handleColorChange = (event) => {
+        setSelectedColor(event.target.value);
     };
 
     const settings = {
@@ -67,7 +95,8 @@ export default function Produtos() {
                             </div>
                         </div>
                         <div className='button-card'>
-                            <button>Peça pelo Whatsapp</button>
+                        <button onClick={() => handleButtonClick(product)}>Peça pelo Whatsapp</button>
+
                         </div>
                     </div>
                 ))}
@@ -110,7 +139,7 @@ export default function Produtos() {
                             <h1>{selectedProduct.name}</h1>
                             <div className='modal-select'>
                                 <label htmlFor='size'>Tamanhos:</label>
-                                <select id='size'>
+                                <select id='size' value={selectedSize} onChange={handleSizeChange}>
                                     {['35/36', '37/38', '39/40', '41/42', '43/44'].map(size => (
                                         <option key={size} value={size}>{size}</option>
                                     ))}
@@ -118,14 +147,14 @@ export default function Produtos() {
                             </div>
                             <div className='modal-select'>
                                 <label htmlFor='color'>Cor:</label>
-                                <select id='color'>
+                                <select id='color' value={selectedColor} onChange={handleColorChange}>
                                     {['Verde', 'Branco', 'Preto', 'Marrom'].map(color => (
                                         <option key={color} value={color}>{color}</option>
                                     ))}
                                 </select>
                             </div>
                             <div className='container-button-modal'>
-                                <button className='btn-comprar'>Comprar</button>
+                                <button className='btn-comprar' onClick={handleBuyClick}>Comprar</button>
                             </div>
                         </div>
                     </div>

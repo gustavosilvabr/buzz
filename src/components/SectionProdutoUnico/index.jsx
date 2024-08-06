@@ -9,6 +9,11 @@ import imgAvaliacoes from './review.png';
 import { products } from '../../data/productsData';
 
 const SingleProduct = () => {
+    const handleButtonClick = (product) => {
+        const message = `Olá, gostaria de mais informações sobre o modelo: ${product.name}.`;
+        const url = `https://wa.me/5561982635975?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank', 'noopener,noreferrer');
+    }
     const selectedProduct = products[1]; // Seleciona o primeiro produto para exibir
     const settings = {
         dots: true,
@@ -61,7 +66,7 @@ const SingleProduct = () => {
                         </div>
                     </div>
                     <div className="button-whatsapp">
-                        <button className='btn-comprar'>Peça pelo WhatsApp</button>
+                        <button className='btn-comprar'  onClick={() => handleButtonClick(selectedProduct)}>Peça pelo WhatsApp</button>
                     </div>
                 </div>
             </div>

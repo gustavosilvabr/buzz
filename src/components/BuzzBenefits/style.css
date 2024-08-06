@@ -10,7 +10,6 @@
 
 .container-title-buzzBenefits {
     text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
     color: #333333;
     font-size: 40px;
     text-align: center; /* Centraliza o título */
@@ -38,13 +37,13 @@
 }
 
 .card-fits h1 {
-    font-family: 'Montserrat', sans-serif;
+   
     font-size: 26px;
     margin: 10px 0; /* Adiciona margem para separar o título do parágrafo */
 }
 
 .card-fits p {
-    font-family: 'Montserrat', sans-serif;
+  
     font-size: 12px;
     margin: 10px 0; /* Adiciona margem para separar o parágrafo de outros elementos */
 }
